@@ -1,11 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import ContactContext from '../../context/contact/contactContext';
 import ContactItem from './ContactItem';
+import Spinner from '../layout/Spinner';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const Contacts = () => {
   const contactContext = useContext(ContactContext);
-  const { contacts, filter } = contactContext;
+  const { contacts, filter, getContacts, loading } = contactContext;
+
+  useEffect(() => {
+    getContacts();
+    //eslint-disable-next-line
+  }, []);
+
   const filterContacts = () => {
     if (filter) {
       const regex = new RegExp(filter, 'gi');
@@ -14,16 +21,24 @@ const Contacts = () => {
     return contacts;
   };
 
-  if (contacts.length === 0) {
+  if (contacts !== null && contacts.length === 0 && !loading) {
     return <h4>Please add a contact...</h4>;
   }
 
   const renderContacts = () => {
-    return filterContacts().map(contact => (
-      <CSSTransition key={contact.id} timeout={500} classNames="item">
-        <ContactItem contact={contact} />
-      </CSSTransition>
-    ));
+    return (
+      <>
+        {contacts !== null && !loading ? (
+          filterContacts().map(contact => (
+            <CSSTransition key={contact._id} timeout={500} classNames="item">
+              <ContactItem contact={contact} />
+            </CSSTransition>
+          ))
+        ) : (
+          <Spinner />
+        )}
+      </>
+    );
   };
   return (
     <>
