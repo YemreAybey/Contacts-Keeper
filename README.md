@@ -13,9 +13,9 @@
 </p>
 
 <p align="center">
-  <img src="./Github-Images/contact-keeper-web.png" width="230" title="Home" alt="Contact_keeper">
-  <img src="./Github-Images/contact-keeper-login.png" width="230" title="Login" alt="Contact_keeper">
-  <img src="./Github-Images/contact-keeper-register.png" width="230" title="Register" alt="Contact_keeper">
+  <img src="./Github-Images/contact-keeper-login.png" width="300" title="Login" alt="Contact_keeper">
+  <img src="./Github-Images/contact-keeper-register.png" width="300" title="Register" alt="Contact_keeper">
+   <img src="./Github-Images/contact-keeper-web.png" width="300" title="Home" alt="Contact_keeper">
 </p>
 
 <br>
