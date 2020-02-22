@@ -4,8 +4,7 @@
   "description": "Contact manager app",
   "main": "server.js",
   "scripts": {
-    "build": "babel index.js -d dist",
-    "start": "npm run build && node dist/index.js",
+    "start": "babel-node server.js",
     "server": "nodemon --exec babel-node server.js",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
@@ -24,6 +23,7 @@
     "mongoose": "^5.9.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/node": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
