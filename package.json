@@ -4,7 +4,7 @@
   "description": "Contact manager app",
   "main": "server.js",
   "scripts": {
-    "start": "node --exec babel-node server.js",
+    "start": "node server.js",
     "server": "nodemon --exec babel-node server.js",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
