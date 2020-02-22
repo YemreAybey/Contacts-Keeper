@@ -50,7 +50,7 @@ const Navbar = ({ title, icon }) => {
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/Home">About</Link>
+          <Link to="/Home">Home</Link>
         </li>
       </ul>
     </div>
