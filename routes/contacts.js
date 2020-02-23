@@ -4,10 +4,11 @@ import {
   addContact,
   updateContact,
   deleteContact,
-} from '../controllers/contacts';
-import { check } from 'express-validator';
+} from '../controllers/contacts.js';
+import { isAuthorized } from '../middleware/auth.js';
+import validator from 'express-validator';
 
-import { isAuthorized } from '../middleware/auth';
+const { check } = validator;
 
 const router = express.Router();
 

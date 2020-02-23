@@ -1,5 +1,7 @@
-import { validationResult } from 'express-validator/';
-import Contact from '../models/Contact';
+import Contact from '../models/Contact.js';
+import validator from 'express-validator';
+
+const { validationResult } = validator;
 
 export const getContacts = async (req, res) => {
   try {

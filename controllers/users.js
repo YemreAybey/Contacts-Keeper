@@ -1,9 +1,10 @@
-import User from '../models/User';
-import { validationResult } from 'express-validator';
+import User from '../models/User.js';
 import bcyrpt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import config from 'config';
+import validator from 'express-validator';
 
+const { validationResult } = validator;
 export const signup = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {

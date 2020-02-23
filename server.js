@@ -1,8 +1,8 @@
 import express from 'express';
-import userRoutes from './routes/users';
-import authRoutes from './routes/auth';
-import contactsRoutes from './routes/contacts';
-import connectDb from './config/db';
+import userRoutes from './routes/users.js';
+import authRoutes from './routes/auth.js';
+import contactsRoutes from './routes/contacts.js';
+import connectDb from './config/db.js';
 import path from 'path';
 
 const app = express();
